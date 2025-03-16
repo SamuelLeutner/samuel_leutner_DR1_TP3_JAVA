@@ -44,11 +44,11 @@ public class Main {
         System.out.println("Exercício 1:");
 
         /*
-        * 1. Classe: Pode ser considerada uma abstração de algo, além de um conjunto de funcionalidades e moldes expecificos dessa abstrção.
-        * 2. Objeto: É a instância da própria classe, os objetos herdam as mesmas funcionalidades da classe, porém encapsulam tanto estado quanto comportamento de cada objeto, assim se tornando único.
-        * 3. Atributo: São as características da classe, ou seja, são as variáveis que definem o objeto na hora da criação.
-        * 4. Método: São as funções que a classe pode executar, ou seja, são as ações que o objeto pode realizar.
-        */
+         * 1. Classe: Pode ser considerada uma abstração de algo, além de um conjunto de funcionalidades e moldes expecificos dessa abstrção.
+         * 2. Objeto: É a instância da própria classe, os objetos herdam as mesmas funcionalidades da classe, porém encapsulam tanto estado quanto comportamento de cada objeto, assim se tornando único.
+         * 3. Atributo: São as características da classe, ou seja, são as variáveis que definem o objeto na hora da criação.
+         * 4. Método: São as funções que a classe pode executar, ou seja, são as ações que o objeto pode realizar.
+         */
 
         System.out.println("Exemplo de criação de uma classe");
         class Carro {
@@ -77,7 +77,7 @@ public class Main {
 
         System.out.println("Exemplo de criação de um novo objeto.");
         Carro carro1 = new Carro();
-        
+
         System.out.println("Exemplo de atribuição dos valores dos atributos do objeto.");
         carro1.marca = "Fiat";
         carro1.modelo = "Uno";
@@ -114,6 +114,41 @@ public class Main {
     public static void ex3() {
         System.out.println("\n==============\n");
         System.out.println("Exercício 3:");
+
+        class Produto {
+            String nome;
+            double preco;
+            int quantidadeEmEstoque;
+
+            public void alterarPreco(double novoPreco) {
+                preco = novoPreco;
+            }
+
+            public void alterarQuantidade(int novaQuantidade) {
+                quantidadeEmEstoque = novaQuantidade;
+            }
+
+            public void exibirInformacoes() {
+                System.out.println("Nome do produto: " + nome);
+                System.out.println("Preço do produto: " + preco);
+                System.out.println("Quantidade em estoque do produto: " + quantidadeEmEstoque);
+            }
+        }
+
+        Produto protudo1 = new Produto();
+        protudo1.nome = "Placa de vídeo";
+        protudo1.preco = 20000;
+        protudo1.quantidadeEmEstoque = 1;
+
+        System.out.println("Atualização do preço do produto: ");
+        protudo1.alterarPreco(28000);
+
+        System.out.println("Alterar quantidade do produto: ");
+        protudo1.alterarQuantidade(5);
+
+        System.out.println("Exibir informações do produto");
+        protudo1.exibirInformacoes();
+
         System.out.println("\n==============\n");
     }
 
