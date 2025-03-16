@@ -155,6 +155,39 @@ public class Main {
     public static void ex4() {
         System.out.println("\n==============\n");
         System.out.println("Exercício 4:");
+
+        class Produto {
+            String nome;
+            double preco;
+            int quantidadeEmEstoque;
+
+            public void alterarPreco(double novoPreco) {
+                preco = novoPreco;
+            }
+
+            public void alterarQuantidade(int novaQuantidade) {
+                quantidadeEmEstoque = novaQuantidade;
+            }
+
+            public void exibirInformacoes() {
+                System.out.println("Nome do produto: " + nome);
+                System.out.println("Preço do produto: " + preco);
+                System.out.println("Quantidade em estoque do produto: " + quantidadeEmEstoque);
+            }
+        }
+
+        Produto produto1 = new Produto();
+
+        produto1.nome = "Processador";
+        produto1.preco = 2500;
+        produto1.quantidadeEmEstoque = 10;
+
+        produto1.alterarPreco(3000);
+
+        produto1.alterarQuantidade(15);
+
+        produto1.exibirInformacoes();
+
         System.out.println("\n==============\n");
     }
 
