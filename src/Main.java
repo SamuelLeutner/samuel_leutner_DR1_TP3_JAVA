@@ -439,6 +439,23 @@ public class Main {
     public static void ex11() {
         System.out.println("\n==============\n");
         System.out.println("Exercício 11:");
+
+        class Circulo {
+            private double raio;
+
+            public double calcularArea() {
+                return Math.PI * raio * raio;
+            }
+        }
+
+        class Esfera {
+            private double raio;
+
+            public double calcularVolume() {
+                return (4.0 / 3.0) * Math.PI * raio * raio * raio;
+            }
+        }
+
         System.out.println("\n==============\n");
     }
 
