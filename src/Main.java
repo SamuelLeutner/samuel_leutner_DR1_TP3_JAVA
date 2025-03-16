@@ -222,7 +222,7 @@ public class Main {
                 return preco;
             }
 
-            public  int getQuantidadeEmEstoque() {
+            public int getQuantidadeEmEstoque() {
                 return quantidadeEmEstoque;
             }
 
@@ -267,6 +267,66 @@ public class Main {
     public static void ex6() {
         System.out.println("\n==============\n");
         System.out.println("Exercício 6:");
+
+        class Produto {
+            String nome;
+            double preco;
+            int quantidadeEmEstoque;
+
+            public Produto(String nome, double preco, int quantidadeEmEstoque) {
+                this.nome = nome;
+                this.preco = preco;
+                this.quantidadeEmEstoque = quantidadeEmEstoque;
+            }
+
+            public void alterarPreco(double novoPreco) {
+                preco = novoPreco;
+            }
+
+            public void alterarQuantidade(int novaQuantidade) {
+                quantidadeEmEstoque = novaQuantidade;
+            }
+
+            public void exibirInformacoes() {
+                System.out.println("Nome do produto: " + nome);
+                System.out.println("Preço do produto: " + preco);
+                System.out.println("Quantidade em estoque do produto: " + quantidadeEmEstoque);
+            }
+
+            public String getNome() {
+                return nome;
+            }
+
+            public double getPreco() {
+                return preco;
+            }
+
+            public int getQuantidadeEmEstoque() {
+                return quantidadeEmEstoque;
+            }
+
+            public void setNome(String nome) {
+                this.nome = nome;
+            }
+
+            public void setPreco(double preco) {
+                this.preco = preco;
+            }
+
+            public void setQuantidadeEmEstoque(int quantidadeEmEstoque) {
+                this.quantidadeEmEstoque = quantidadeEmEstoque;
+            }
+        }
+
+        /*
+        Construtores em linguagens orientadas a objeto são fundamentais para instanciar a classe definida.
+        Eles são chamados automaticamente e utiliza os valores passados por parametro. Assim facilitando e otimizando
+        linhas de código. Além de poder utilizar para instanciar outras classes ou chamar funções automaticamente.
+         */
+
+        Produto produto1 = new Produto("Plama mãe", 1500, 500);
+        produto1.exibirInformacoes();
+
         System.out.println("\n==============\n");
     }
 
