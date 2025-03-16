@@ -333,6 +333,15 @@ public class Main {
     public static void ex7() {
         System.out.println("\n==============\n");
         System.out.println("Exercício 7:");
+
+        class Conta {
+            private String nome;
+            private int numero;
+            private String agencia;
+            private double saldo;
+            private String dataAbertura;
+        }
+
         System.out.println("\n==============\n");
     }
 
