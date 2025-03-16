@@ -348,6 +348,27 @@ public class Main {
     public static void ex8() {
         System.out.println("\n==============\n");
         System.out.println("Exercício 8:");
+
+        class Conta {
+            private String nome;
+            private int numero;
+            private String agencia;
+            private double saldo;
+            private String dataAbertura;
+
+            public void saca(double saldo) {
+                this.saldo = saldo;
+            }
+
+            public void deposita(double novoSaldo) {
+                this.saldo += novoSaldo;
+            }
+
+            public double calculaRendimento() {
+                return this.saldo * 0.1;
+            }
+        }
+
         System.out.println("\n==============\n");
     }
 
