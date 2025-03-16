@@ -462,6 +462,36 @@ public class Main {
     public static void ex12() {
         System.out.println("\n==============\n");
         System.out.println("Exercício 12:");
+
+        class Circulo {
+            private double raio;
+
+            public double calcularArea() {
+                return Math.PI * raio * raio;
+            }
+        }
+
+        class Esfera {
+            private double raio;
+
+            public double calcularVolume() {
+                return (4.0 / 3.0) * Math.PI * raio * raio * raio;
+            }
+        }
+
+        Circulo circulo = new Circulo();
+        System.out.println("Instanciando um objeto da classe Circulo com raio 3.0");
+        circulo.raio = 3.0;
+        System.out.println("Instanciando um objeto da classe Esfera com raio 5.0");
+        Esfera esfera = new Esfera();
+        esfera.raio = 5.0;
+
+        System.out.println("Testando o método calcularArea() da classe Circulo e exibindo o resultado");
+        System.out.println("A área do círculo com raio 3.0 é: " + circulo.calcularArea());
+
+        System.out.println("Testando o método calcularVolume() da classe Esfera e exibindo o resultado");
+        System.out.println("O volume da esfera com raio 5.0 é: " + esfera.calcularVolume());
+
         System.out.println("\n==============\n");
     }
 }
