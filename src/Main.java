@@ -335,7 +335,7 @@ public class Main {
         System.out.println("Exercício 7:");
 
         class Conta {
-            private String nome;
+            private String titular;
             private int numero;
             private String agencia;
             private double saldo;
@@ -350,14 +350,14 @@ public class Main {
         System.out.println("Exercício 8:");
 
         class Conta {
-            private String nome;
+            private String titular;
             private int numero;
             private String agencia;
             private double saldo;
             private String dataAbertura;
 
             public void saca(double saldo) {
-                this.saldo = saldo;
+                this.saldo -= saldo;
             }
 
             public void deposita(double novoSaldo) {
@@ -375,6 +375,44 @@ public class Main {
     public static void ex9() {
         System.out.println("\n==============\n");
         System.out.println("Exercício 9:");
+
+        class Conta {
+            private String titular;
+            private int numero;
+            private String agencia;
+            private double saldo;
+            private String dataAbertura;
+
+            public void saca(double saldo) {
+                this.saldo -= saldo;
+            }
+
+            public void deposita(double novoSaldo) {
+                this.saldo += novoSaldo;
+            }
+
+            public double calculaRendimento() {
+                return this.saldo * 0.1;
+            }
+        }
+
+        System.out.println("Testando a conta");
+        Conta conta1 = new Conta();
+        conta1.titular = "Samuel";
+        conta1.numero = 1;
+        conta1.agencia = "Banco do Brasil";
+        conta1.saldo = 500;
+        conta1.dataAbertura = "16/03/2025";
+
+        System.out.println("Saldo antes de sacar 200: " + conta1.saldo);
+        conta1.saca(200);
+        System.out.println("Saldo depois de sacar 200: " + conta1.saldo);
+
+        conta1.deposita(100);
+        System.out.println("Saldo depois de depositar 100: " + conta1.saldo);
+
+        System.out.println("O rendimento da conta foi: " + conta1.calculaRendimento());
+
         System.out.println("\n==============\n");
     }
 
