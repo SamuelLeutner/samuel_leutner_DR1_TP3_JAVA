@@ -95,6 +95,19 @@ public class Main {
     public static void ex2() {
         System.out.println("\n==============\n");
         System.out.println("Exercício 2:");
+
+        class Produto {
+            String nome;
+            double preco;
+            int quantidadeEmEstoque;
+
+            /*
+            Nesse contexto de produto esses atributos inseridos acima são imporantes para poder criar cada objeto de produto
+            como único passando o nome, preço e a quantidade em estoque. Atráves deles podemos criar, atualizar e exibir assim
+            como está o requisito.
+             */
+        }
+
         System.out.println("\n==============\n");
     }
 
