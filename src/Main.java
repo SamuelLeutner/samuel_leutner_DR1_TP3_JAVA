@@ -194,6 +194,73 @@ public class Main {
     public static void ex5() {
         System.out.println("\n==============\n");
         System.out.println("Exercício 5:");
+
+        class Produto {
+            String nome;
+            double preco;
+            int quantidadeEmEstoque;
+
+            public void alterarPreco(double novoPreco) {
+                preco = novoPreco;
+            }
+
+            public void alterarQuantidade(int novaQuantidade) {
+                quantidadeEmEstoque = novaQuantidade;
+            }
+
+            public void exibirInformacoes() {
+                System.out.println("Nome do produto: " + nome);
+                System.out.println("Preço do produto: " + preco);
+                System.out.println("Quantidade em estoque do produto: " + quantidadeEmEstoque);
+            }
+
+            public String getNome() {
+                return nome;
+            }
+
+            public double getPreco() {
+                return preco;
+            }
+
+            public  int getQuantidadeEmEstoque() {
+                return quantidadeEmEstoque;
+            }
+
+            public void setNome(String nome) {
+                this.nome = nome;
+            }
+
+            public void setPreco(double preco) {
+                this.preco = preco;
+            }
+
+            public void setQuantidadeEmEstoque(int quantidadeEmEstoque) {
+                this.quantidadeEmEstoque = quantidadeEmEstoque;
+            }
+        }
+
+        Produto produto1 = new Produto();
+        produto1.nome = "Gabinete";
+        produto1.preco = 500;
+        produto1.quantidadeEmEstoque = 10;
+
+        System.out.println("Informações antes de alterar");
+        produto1.exibirInformacoes();
+
+        produto1.setNome("Gabinete Lian Li");
+        produto1.setPreco(2500);
+        produto1.setQuantidadeEmEstoque(30);
+
+        System.out.println("\nInformações depois de alterar");
+        System.out.println("Get nome: " + produto1.getNome());
+        System.out.println("Get preço: " + produto1.getPreco());
+        System.out.println("Get quantidade em estoque: " + produto1.getQuantidadeEmEstoque());
+
+        /* Os métodos getters e setters são extremamente uteis em linguagens orientadas a objetos. Eles nos proporciona acessar
+        modificar os atributos de uma classe e também saber quais são os métodos que podemos acessar ou não. Pela regra de négocio,
+        quando passamos os private, protected ou public. Assim conseguimos controlar e facilitar o desenvolvimento.
+         */
+
         System.out.println("\n==============\n");
     }
 
