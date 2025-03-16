@@ -419,6 +419,20 @@ public class Main {
     public static void ex10() {
         System.out.println("\n==============\n");
         System.out.println("Exercício 10:");
+
+        class Circulo {
+            private double raio;
+        }
+
+        class Esfera {
+            private double raio;
+        }
+
+        /*
+        O atributo raio é fundamental para as classes Circulo e Esfera porque ele define o tamanho e as propriedades dessas formas.
+        Assim posibilitando algum futuro calculo ou gerenciamento.
+         */
+
         System.out.println("\n==============\n");
     }
 
